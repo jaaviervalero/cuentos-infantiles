@@ -6,9 +6,11 @@ import HistoryView from './views/HistoryView';
 import StatsView from './views/StatsView';
 
 import StoryReaderView from './views/StoryReaderView';
+import ParentsView from './views/ParentsView';
 
 // Import View styles
 import './views/Views.css';
+import './views/ParentsView.css';
 import './index.css';
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
           <Route path="history" element={<HistoryView />} />
           <Route path="stats" element={<StatsView />} />
           <Route path="story/:id" element={<StoryReaderView />} />
+          <Route path="parents" element={<ParentsView />} />
         </Route>
       </Routes>
     </BrowserRouter>

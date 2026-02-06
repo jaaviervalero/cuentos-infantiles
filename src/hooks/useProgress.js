@@ -23,8 +23,18 @@ export const useProgress = () => {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
     }, [progress]);
 
-    const markStoryAsRead = (story) => {
+    // Helper to get "Simulated Today"
+    const getToday = () => {
         const today = new Date();
+        const offset = parseInt(localStorage.getItem('dev_day_offset') || '0');
+        if (offset) {
+            today.setDate(today.getDate() + offset);
+        }
+        return today;
+    };
+
+    const markStoryAsRead = (story) => {
+        const today = getToday();
         const lastDate = progress.lastCompletedDate ? new Date(progress.lastCompletedDate) : null;
 
         let newStreak = progress.streak;

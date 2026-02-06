@@ -237,9 +237,16 @@ const stories = [
 
 export const getDailyStory = () => {
     const start = startOfYear(new Date());
-    const today = new Date();
+    let today = new Date();
+
+    // Dev/Parents Check: Time Travel
+    const offset = parseInt(localStorage.getItem('dev_day_offset') || '0');
+    if (offset) {
+        today.setDate(today.getDate() + offset);
+    }
+
     const daysPassed = differenceInDays(today, start);
-    const storyIndex = daysPassed % stories.length;
+    const storyIndex = Math.abs(daysPassed % stories.length);
     return stories[storyIndex];
 };
 

@@ -1,0 +1,127 @@
+.parents-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.math-challenge {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.math-challenge input {
+    width: 60px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    text-align: center;
+}
+
+.unlock-btn,
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.unlock-btn {
+    background-color: var(--primary-accent);
+    color: white;
+}
+
+.unlock-btn:active,
+.action-btn:active {
+    transform: scale(0.95);
+}
+
+.control-group {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    width: 100%;
+    text-align: left;
+}
+
+.control-group h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.control-group p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.time-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.offset-display {
+    background: var(--bg-color);
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+    text-align: center;
+    font-family: monospace;
+}
+
+.buttons-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-btn {
+    flex: 1;
+}
+
+.action-btn.primary {
+    background-color: var(--secondary-accent);
+    color: white;
+}
+
+.action-btn.secondary {
+    background-color: var(--text-secondary);
+    color: white;
+}
+
+.action-btn.danger {
+    background-color: #ff4757;
+    color: white;
+    width: 100%;
+}
+
+.danger-zone {
+    border: 1px solid #ff4757;
+}
+
+.back-btn {
+    margin-top: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    text-decoration: underline;
+    cursor: pointer;
+}

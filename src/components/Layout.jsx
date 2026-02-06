@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { BookOpen, History, Award } from 'lucide-react';
+import { BookOpen, History, Award, Settings } from 'lucide-react';
 import './Layout.css';
 
 const Layout = () => {
@@ -12,6 +12,9 @@ const Layout = () => {
         <div className="layout-container">
             <header className="app-header">
                 <h1 className="logo-text">Cuentos Mágicos</h1>
+                <Link to="/parents" style={{ color: 'white', opacity: 0.8 }}>
+                    <Settings size={20} />
+                </Link>
             </header>
 
             <main className="app-content">
