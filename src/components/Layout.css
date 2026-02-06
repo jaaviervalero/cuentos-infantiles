@@ -1,0 +1,72 @@
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 600px;
+    /* Mobile first view on desktop */
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.app-header {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--card-bg);
+    top: 0;
+    z-index: 10;
+}
+
+.logo-text {
+    font-family: 'Fredoka', sans-serif;
+    color: var(--primary-accent);
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.app-content {
+    flex: 1;
+    padding: 1rem;
+    padding-bottom: 5rem;
+    /* Space for bottom nav */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--card-bg);
+    display: flex;
+    justify-content: space-around;
+    padding: 0.8rem 0;
+    border-top: 1px solid #eee;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+    z-index: 20;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    gap: 4px;
+    transition: color 0.2s;
+}
+
+.nav-item.active {
+    color: var(--primary-accent);
+    font-weight: 600;
+}
+
+.nav-item:hover {
+    color: var(--primary-accent);
+}
